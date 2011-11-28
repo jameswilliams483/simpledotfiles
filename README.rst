@@ -12,6 +12,14 @@ append
     ...
     ## {% simplelogfiles_end %}
 
+extend
+  Keep old configuration but in a seperate file.
+  eg.
+  mv .bashrc .bashrc_local
+  ln .bashrc ~/.bashrc
+  ...
+  source ~/.bashrc_local 
+
 overwrite
     removes old file
 

@@ -1,0 +1,23 @@
+# Include external files
+# ---------------
+if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
+if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
+
+
+# Settings
+# ---------------
+export HISTFILESIZE=10000 
+export HISTSIZE=10000 
+export HISTCONTROL=erasedups 
+
+# Other:
+BOND="op successful!"
+
+# Functions
+# ---------------
+# Replacement for cd 
+function go () {
+    cd $1
+    ls
+}
+
