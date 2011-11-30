@@ -3,6 +3,7 @@ import os
 #TODO: deal with special cases in a specials directory
 # eg. vim files, try to save current vim config in a local file
 #TODO: save logs somewhere
+#TODO: add ability to preview file during command prompt
 
 # Files in here won't be symlinked. Assumes unique directory names
 IGNORE = ['etc']
@@ -26,7 +27,6 @@ def _get_symlinks():
     print ("gathering symlinks...")
     out = []
     walker = os.walk(".")
-    #OPTIMIZE: exclude directories? 
     for path, directory, files in walker:
         for inum, dname in enumerate(directory):
             if (dname in IGNORE):

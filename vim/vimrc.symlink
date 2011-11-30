@@ -1,10 +1,12 @@
 " Basic Configs
 " ------------------------------
-set nocompatible
 
-set number
-set ruler
+"  Basics
+set nocompatible " don't respect vi defaults
+set number 
+set ruler " line & column count on bottom right corner
 syntax on
+set autoindent
 
 " Set encoding
 set encoding=utf-8
@@ -30,6 +32,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Status bar
 set laststatus=2
 
+" Automatic
+autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
+
 " Include user's local vim config
 " ------------------------------
 if filereadable(expand("~/.vimrc.local"))
@@ -37,6 +42,7 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " Custom Commands
+" ------------------------------
 " sudo write
 ca w!! w !sudo tee >/dev/null "%"
 

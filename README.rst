@@ -2,6 +2,13 @@ Overview:
 =========
 This is to help manage your dotfiles across multiple configurations
 
+Files suffixes:
+---------------
+.symlink 
+  These files are hardlinked to the user's home directory.
+.priv
+  These files are ignored by git. Sensitive config options should be put here
+
 Options:
 ---------------
 append
@@ -31,4 +38,5 @@ append-all
 
 backup-all
     Saves backups as ~/.dotfiles/<file>
+
 
