@@ -6,18 +6,18 @@ if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
 
 # Settings
 # ---------------
-export HISTFILESIZE=10000 
-export HISTSIZE=10000 
-export HISTCONTROL=erasedups 
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+export HISTCONTROL=erasedups
 
 # Other:
 BOND="op successful!"
 
 # Functions
 # ---------------
-# Replacement for cd 
+# Replacement for cd
 function go () {
-    cd $1
+    cd "$1"
     ls
 }
 
