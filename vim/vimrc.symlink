@@ -1,9 +1,13 @@
+" Important
+" ---------------
+set runtimepath+=~/.vim/plugin
+
 " Basic Configs
 " ------------------------------
 
 "  Basics
 set nocompatible " don't respect vi defaults
-set number 
+set number
 set ruler " line & column count on bottom right corner
 syntax on
 set autoindent

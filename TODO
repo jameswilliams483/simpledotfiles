@@ -1,2 +1,10 @@
 
 #HIGH: change bashrc_local to bashrc.local
+
+Get symlink2 format to work.
+---------------
+- link files that aren't dot files and not directly under user home folder
+eg.
+  #Dope
+  path = ~/ipython/profile/ipython_config.py
+  append = False

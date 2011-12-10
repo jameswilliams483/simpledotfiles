@@ -10,6 +10,9 @@ IGNORE = ['etc']
 OVERWRITE_ALL = False
 SKIP_ALL = False
 
+#TODO: change this to automatic
+CUSTOM = ['vim']
+
 
 
 #OPTIMIZE: cache these results
@@ -23,7 +26,7 @@ def _get_symlinks():
     [(path, [ foo.symlink]), (...),...]
     """
     global IGNORE
-    
+
     print ("gathering symlinks...")
     out = []
     walker = os.walk(".")
@@ -35,6 +38,18 @@ def _get_symlinks():
         if (symlinks):
             out.append((path, symlinks))
     return out
+
+#TODO(high): think about this some more
+def _get_dirs():
+    """
+    Get files like .vim and all subdirectories
+    """
+    global IGNORE
+
+    print ("gathering directories...")
+    out = []
+    walker = os.walk(".")
+    return
 
 def install(args = None):
     """
@@ -53,7 +68,7 @@ def install(args = None):
             #SC: Handle file collision
             if (os.path.exists(fpath)):
                 if not (SKIP_ALL):
-                    resp = raw_input("%s exists. [s]kip, [S]kip All, [O]verwrite: " 
+                    resp = raw_input("%s exists. [s]kip, [S]kip All, [O]verwrite: "
                             % fname)
                 else:
                     if (SKIP_ALL):

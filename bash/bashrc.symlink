@@ -17,7 +17,13 @@ BOND="op successful!"
 # ---------------
 # Replacement for cd
 function go () {
+    pushd . > /dev/null
     cd "$1"
     ls
+}
+
+function go2 () {
+    cd "$1"
+    ls -la
 }
 
