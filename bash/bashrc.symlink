@@ -3,12 +3,20 @@
 if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
 if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
 
+# Aliases
+# TODO: move into aliases
+alias topm="top -o rsize"
+alias topc="top -o cpu"
+
 
 # Settings
 # ---------------
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
+
+# Python
+export PYTHONPATH=~/Dropbox/asgard/pybin/bin/:$PYTHONPATH
 
 # Other:
 BOND="op successful!"

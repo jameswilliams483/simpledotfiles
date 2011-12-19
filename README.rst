@@ -2,9 +2,14 @@ Overview:
 =========
 This is to help manage your dotfiles across multiple configurations
 
+Folders:
+---------
+protected
+    Everything in here is ignored by git
+
 Files suffixes:
 ---------------
-.symlink 
+.symlink
   These files are hardlinked to the user's home directory.
 .priv
   These files are ignored by git. Sensitive config options should be put here
@@ -25,7 +30,7 @@ extend
   mv .bashrc .bashrc_local
   ln .bashrc ~/.bashrc
   ...
-  source ~/.bashrc_local 
+  source ~/.bashrc_local
 
 overwrite
     removes old file

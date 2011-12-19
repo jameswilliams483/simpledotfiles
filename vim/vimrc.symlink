@@ -94,6 +94,6 @@ endif
 " ------------------------------
 " sudo write
 ca w!! w !sudo tee >/dev/null "%"
-
-" Functions
-
+" Basic copy and paste functionality
+vmap <C-c>:w! /tmp/_cpy " Todo, this creates a conflict
+map <C-p> :r! cat /tmp/_cpy
