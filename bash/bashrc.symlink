@@ -25,7 +25,6 @@ BOND="op successful!"
 # ---------------
 # Replacement for cd
 function go () {
-    pushd . > /dev/null
     cd "$1"
     ls
 }
@@ -35,3 +34,14 @@ function go2 () {
     ls -la
 }
 
+# External
+# TODO: move once this gets too big
+# ---------
+# Python
+
+# Virtualenv wrapper
+export WORKON_HOME=~/.virtualenvs
+source $WORKON_HOME/virtualenvwrapper.sh
+
+# Fabric wrapper
+export FABRICW_HOME=~/.fabricwrapper

@@ -6,14 +6,12 @@ import os
 #TODO: add ability to preview file during command prompt
 
 # Files in here won't be symlinked. Assumes unique directory names
-IGNORE = ['etc']
+IGNORE = ['']
 OVERWRITE_ALL = False
 SKIP_ALL = False
 
 #TODO: change this to automatic
 CUSTOM = ['vim']
-
-
 
 #OPTIMIZE: cache these results
 def _get_symlinks():

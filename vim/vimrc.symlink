@@ -1,3 +1,6 @@
+" #TODO:
+" - special copy ( set paste | !pbcopy | set nopaste) _medium_
+
 " Important
 " ---------------
 set runtimepath+=~/.vim/plugin
@@ -94,6 +97,39 @@ endif
 " ------------------------------
 " sudo write
 ca w!! w !sudo tee >/dev/null "%"
+
+" python compilation
+ca run_py !python %
+ca test_py !python -m doctest %
+
 " Basic copy and paste functionality
 vmap <C-c>:w! /tmp/_cpy " Todo, this creates a conflict
 map <C-p> :r! cat /tmp/_cpy
+
+" ====================================
+
+" Switching Tabs
+
+" Map Command-# to switch tabs
+" #FIXME.high: this doesn't work
+map  <C-0> tabn0
+imap <C-0> <Esc>0gt
+map  <C-1> tabn1
+imap <C-1> <Esc>1gt
+map  <C-2> tabn2
+imap <C-2> <Esc>2gt
+map  <C-3> tabn3
+imap <C-3> <Esc>3gt
+map  <C-4> tabn4
+imap <C-4> <Esc>4gt
+map  <C-5> tabn5
+imap <C-5> <Esc>5gt
+map  <C-6> tabn6
+imap <C-6> <Esc>6gt
+map  <C-7> tabn7
+imap <C-7> <Esc>7gt
+map  <C-8> tabn8
+imap <C-8> <Esc>8gt
+map  <C-9> tabn9
+imap <C-9> <Esc>9gt
+
