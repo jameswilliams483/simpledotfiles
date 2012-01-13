@@ -1,4 +1,3 @@
-#!/usr/bin/env pyhton2.7
 import os
 #TODO: deal with special cases in a specials directory
 # eg. vim files, try to save current vim config in a local file
