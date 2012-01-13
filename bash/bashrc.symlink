@@ -7,6 +7,7 @@ if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
 # TODO: move into aliases
 alias topm="top -o rsize"
 alias topc="top -o cpu"
+alias ll="ls -l"
 
 
 # Settings
@@ -15,8 +16,6 @@ export HISTFILESIZE=10000
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
-# Python
-export PYTHONPATH=~/Dropbox/asgard/pybin/bin/:$PYTHONPATH
 
 # Other:
 BOND="op successful!"
@@ -26,11 +25,6 @@ BOND="op successful!"
 # Replacement for cd
 function go () {
     cd "$1"
-    ls
-}
-
-function go2 () {
-    cd "$1"
     ls -la
 }
 
@@ -38,10 +32,13 @@ function go2 () {
 # TODO: move once this gets too big
 # ---------
 # Python
+# --------------------------
 
 # Virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
-source $WORKON_HOME/virtualenvwrapper.sh
+if [ -d $WORKON_HOME ];then
+    source $WORKON_HOME/virtualenvwrapper.sh
+fi
 
 # Fabric wrapper
 export FABRICW_HOME=~/.fabricwrapper

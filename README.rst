@@ -9,10 +9,15 @@ protected
 
 Files suffixes:
 ---------------
+.custom
+  These files need special instructions _experimental_
+
 .symlink
   These files are hardlinked to the user's home directory.
 .priv
   These files are ignored by git. Sensitive config options should be put here
+
+#######################
 
 Options:
 ---------------

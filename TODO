@@ -1,18 +1,7 @@
+Todo:
+- use cpickle
+- get testing suite set up
 
-#HIGH: change bashrc_local to bashrc.local
-#
 
-Get symlink2 format to work.
----------------
-- link files that aren't dot files and not directly under user home folder
-eg.
-  #Dope
-  path = ~/ipython/profile/ipython_config.py
-  append = False
-
-Medium:
-=========
-1. Get extension to handle vim plugins
-- be able to sync vim plugs
-
-2. Overwrite all Function needs to work
+Transfer:
+pylint config[ January 5, 2012 ]
