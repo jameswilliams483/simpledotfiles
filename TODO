@@ -1,7 +1,6 @@
-Todo:
-- use cpickle
-- get testing suite set up
+Major:
+- overwrite all feature
 
 
-Transfer:
-pylint config[ January 5, 2012 ]
+Minor:
+- source bashrc   _easy_
