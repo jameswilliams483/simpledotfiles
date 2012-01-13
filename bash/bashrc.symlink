@@ -36,7 +36,7 @@ function go () {
 
 # Virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
-if [ -d $WORKON_HOME ];then
+if [ -d $WORKON_HOME/virtualenvwrapper.sh ];then
     source $WORKON_HOME/virtualenvwrapper.sh
 fi
 
