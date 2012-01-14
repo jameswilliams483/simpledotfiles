@@ -2,6 +2,10 @@
 set -g prefix C-j
 bind-key C-j last-window
 
+# Options
+#set-window-option mode-keys vi
+set-option mode-keys vi
+
 #Split Window
 unbind %
 bind | split-window -h

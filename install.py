@@ -86,7 +86,14 @@ def install(args = None):
 
             # Create hard link to dot file
             print("linking %s..." % fname)
-            os.link(fpath_old, fpath)
+            try:
+                os.link(fpath_old, fpath)
+            except OSError:
+                # Broken symlink
+                if (os.path.lexists(fpath)):
+                    os.remove(fpath)
+                # Try linking again
+                os.link(fpath_old, fpath)
     print("done :)")
 
 
