@@ -46,6 +46,7 @@ filetype plugin indent on
 " When I close a tab, remove the buffer
 set nohidden
 
+
 " Automatic Comands
 " -----------------
 " Change to current Directory
@@ -110,6 +111,10 @@ endfunction
 function Paste()
   :r! cat /tmp/_cpy
 endfunction
-
 " ====================================
+" Etc
+call pathogen#infect()
+
+" Close vim if NERDTree is only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 

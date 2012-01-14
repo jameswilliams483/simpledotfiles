@@ -1,6 +1,11 @@
 Major:
 - overwrite all feature
+- add virtualenvwrapper file
+vim plugins
+- nerd tree plugin
 
 
 Minor:
 - source bashrc   _easy_
+- edit etc/ipython.symlnk2
+- add pip config file

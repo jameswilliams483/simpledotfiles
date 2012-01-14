@@ -17,6 +17,22 @@ Files suffixes:
 .priv
   These files are ignored by git. Sensitive config options should be put here
 
+Files
+---------
+etc
+  screenrc.symlink
+  tmux.conf.symlink
+
+python
+  pdbrc.symlink
+  pylint.custom
+
+vim
+  gvimrc.symlink
+  vimrc.symlink
+
+
+
 #######################
 
 Options:
