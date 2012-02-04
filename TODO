@@ -34,3 +34,15 @@ Git:
 Other:
 - add pip file [0.4]
 - edit etc/ipython.symlnk2
+
+
+Next
+===========================
+- add argparse module
+- test that everything works
+
+~/.dotfiles
+-> rc of sorts
+
+~/.dotfiles_logs
+-> collection of everything installed by .dotfiles

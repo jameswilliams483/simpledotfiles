@@ -1,7 +1,3 @@
-# New
-alias v="vim"
-
-
 # Settings
 # ---------------
 export HISTFILESIZE=10000
@@ -10,14 +6,9 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 #export HISTIGNORE="&:ls"[bf]g:exit:[ /t]*" #ignore spaces, duplicates and more in history
 export EDITOR="vim"
-export ASGARD="~/Dropbox/asgard" #CUSTOMIZE
+export INPUTRC=~/.inputrc  # Allows searching of history
+export ASGARD="~/Dropbox/asgard" #TODO(customize)
 
-# Aliases
-# TODO: move into aliases
-alias topm="top -o rsize"
-alias topc="top -o cpu"
-alias ll="ls -l"
-#alias ls="ls --color=auto" #doesn't work on mac
 
 # Other:
 BOND="op successful!"
@@ -30,23 +21,26 @@ function go () {
     ls -l
 }
 
+# Include external files
+# ---------------
+if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
+if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
+#if [ -a ~/.bash_profile ];then source ~/.bash_profile; fi
+##############################################
 # External
 # TODO: move once this gets too big
-# ---------
+
 # Python
 # --------------------------
-export PYTHONPATH=$ASGARD/lib/pythonbin/:$PYTHONPATH
+export PYTHONPATH=$ASGARD/code/libs/python/bin:$PYTHONPATH
 
 # Virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
-if [ -d $WORKON_HOME/virtualenvwrapper.sh ];then
+#/Users/kevinlin/.virtualenvs/virtualenvwrapper.sh
+if [ -a $WORKON_HOME/virtualenvwrapper.sh ];then
     source $WORKON_HOME/virtualenvwrapper.sh
 fi
 
 # Fabric wrapper
 export FABRICW_HOME=~/.fabricwrapper
 
-# Include external files
-# ---------------
-if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
-if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi

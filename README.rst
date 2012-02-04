@@ -1,6 +1,6 @@
 Overview:
 =========
-This is to help manage your dotfiles across multiple configurations
+This is to help manage your dotfiles across multiple configurations.
 
 Folders:
 ---------
@@ -53,6 +53,11 @@ append
     ## DON'T delete anything below this line
     ...
     ## {% simplelogfiles_end %}
+
+ delete
+    Delete dotfiles
+    -a
+        Delete all dotfiles
 
 extend
   Keep old configuration but in a seperate file.

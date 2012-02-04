@@ -7,48 +7,49 @@ import os
 __version__ = '0.0.1'
 
 # Files in here won't be symlinked. Assumes unique directory names
-IGNORE = ['']
+IGNORE = ['.git']
 OVERWRITE_ALL = False
 SKIP_ALL = False
 
 #TODO: change this to automatic
 CUSTOM = ['vim']
 
-#OPTIMIZE: cache these results
-def _get_symlinks():
+def _collect_files(pattern):
     """
-    Get all files ending in .symlink from dirs
-    Doesn't follow symbolic links
+    Collect all files by searching recursively via current directory.
+    Will ignore files in IGNORE
+    @params:
+    pattern to search for
     @return:
     List of tuples (path, [files])
     eg.
     [(path, [ foo.symlink]), (...),...]
     """
     global IGNORE
-
-    print ("gathering symlinks...")
     out = []
     walker = os.walk(".")
     for path, directory, files in walker:
         for inum, dname in enumerate(directory):
             if (dname in IGNORE):
                 del directory[inum]
-        symlinks = filter(lambda x: x.rfind(".symlink") >= 0, files)
+        symlinks = filter(lambda x: x.endswith(pattern) >= 0, files)
         if (symlinks):
             out.append((path, symlinks))
     return out
 
-#TODO(high): think about this some more
-def _get_dirs():
-    """
-    Get files like .vim and all subdirectories
-    """
-    global IGNORE
 
-    print ("gathering directories...")
-    out = []
-    walker = os.walk(".")
-    return
+#OPTIMIZE: cache these results
+def _get_symlinks():
+    """
+    Get all files ending in .symlink
+    @return:
+    List of tuples (path, [files])
+    eg.
+    [(path, [ foo.symlink]), (...),...]
+    """
+    print ("gathering symlinks...")
+    res = _collect_files("symlink")
+    return res
 
 def install(args = None):
     """
