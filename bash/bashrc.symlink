@@ -1,22 +1,23 @@
-# Include external files
+# New
+alias v="vim"
+
+
+# Settings
 # ---------------
-if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
-if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
+export HISTFILESIZE=10000
+export HISTTIMEFORMAT='%F %T ' # add timestamp to history
+export HISTSIZE=10000
+export HISTCONTROL=erasedups
+#export HISTIGNORE="&:ls"[bf]g:exit:[ /t]*" #ignore spaces, duplicates and more in history
+export EDITOR="vim"
+export ASGARD="~/Dropbox/asgard" #CUSTOMIZE
 
 # Aliases
 # TODO: move into aliases
 alias topm="top -o rsize"
 alias topc="top -o cpu"
 alias ll="ls -l"
-alias ls="ls --color=auto"
-
-
-# Settings
-# ---------------
-export HISTFILESIZE=10000
-export HISTSIZE=10000
-export HISTCONTROL=erasedups
-
+#alias ls="ls --color=auto" #doesn't work on mac
 
 # Other:
 BOND="op successful!"
@@ -26,7 +27,7 @@ BOND="op successful!"
 # Replacement for cd
 function go () {
     cd "$1"
-    ls -la
+    ls -l
 }
 
 # External
@@ -34,6 +35,7 @@ function go () {
 # ---------
 # Python
 # --------------------------
+export PYTHONPATH=$ASGARD/lib/pythonbin/:$PYTHONPATH
 
 # Virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
@@ -43,3 +45,8 @@ fi
 
 # Fabric wrapper
 export FABRICW_HOME=~/.fabricwrapper
+
+# Include external files
+# ---------------
+if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
+if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi

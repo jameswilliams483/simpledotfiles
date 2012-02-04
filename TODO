@@ -1,11 +1,20 @@
 Major:
-- overwrite all feature
-- add virtualenvwrapper file
-vim plugins
-- nerd tree plugin
+========
+- git integration [1.0]
+- add virtualenvwrapper file [1.0]
 
-
+####################################################
 Minor:
-- source bashrc   _easy_
+=======
+General:
+- overwrite all feature in install.py [0.3]
+
+Vim:
+- add .vim plugins [0.2]
+
+Git:
+- add git alias [0.2]
+
+Other:
+- add pip file [0.4]
 - edit etc/ipython.symlnk2
-- add pip config file

@@ -4,6 +4,8 @@ import os
 #TODO: save logs somewhere
 #TODO: add ability to preview file during command prompt
 
+__version__ = '0.0.1'
+
 # Files in here won't be symlinked. Assumes unique directory names
 IGNORE = ['']
 OVERWRITE_ALL = False

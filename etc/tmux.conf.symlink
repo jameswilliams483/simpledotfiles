@@ -4,7 +4,7 @@ bind-key C-j last-window
 
 # Options
 #set-window-option mode-keys vi
-set-option mode-keys vi
+# set-option mode-keys vi
 
 #Split Window
 unbind %
@@ -34,4 +34,5 @@ set -g visual-activity on
 #Automatic rename
 setw -g automatic-rename on
 
-
+# Copy mode using vi syntax
+set-window-option mode-keys vi

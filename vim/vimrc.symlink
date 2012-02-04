@@ -104,8 +104,14 @@ ca run_py !python %
 ca test_py !python -m doctest %
 
 " Basic copy and paste functionality
+" TODO: hack
 function Copy()
   :w! /tmp/_cpy " Todo, this creates a conflict
+  :!/usr/bin/osascript -e 'tell application "System Events"' -e 'set the clipboard to (read posix file "/tmp/_cpy" as text)' -e 'end tell'
+endfunction
+
+function Copy2()
+  :!/usr/bin/osascript -e 'tell application "System Events"' -e 'set the clipboard to (read posix file "/tmp/_cpy" as text)' -e 'end tell'
 endfunction
 
 function Paste()
