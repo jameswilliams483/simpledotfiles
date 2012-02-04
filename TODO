@@ -1,9 +1,25 @@
+2.0
+
+- add virtualenvwrapper file [major]
+- add tests [major]
+###################################################
+1.0
+
 Major:
 ========
-- git integration [1.0]
-- add virtualenvwrapper file [1.0]
 
-####################################################
+- basic command line operations
+    -b <path>
+        Backup all dotfiles
+    -d
+        Delete all dotfiles
+
+- profiles
+    Be able to install vim files or other networking dotfiles instead of installing everything
+
+- custom scripts
+    Execute custom installation scripts. Used to install .vim folder and other config files
+
 Minor:
 =======
 General:

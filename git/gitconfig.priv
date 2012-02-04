@@ -1,0 +1,20 @@
+[user]
+	name = Kevin Lin
+	email = kevinslin8@gmail.com
+[core]
+	excludefile = /Users/kevinlin/.gitignore_global
+	excludesfile = /Users/kevinlin/.gitignore_global
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	ui = auto
+[github]
+	user = kevinslin
+	token = 3eed9b4f5027b43a4f31bdf03023d518
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
