@@ -44,6 +44,11 @@ vim
 
 #######################
 
+Syntax:
+-------
+-c | --confirm
+    Confirm for every symbolic link
+
 Options:
 ---------------
 append

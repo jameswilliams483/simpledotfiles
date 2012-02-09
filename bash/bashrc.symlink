@@ -1,14 +1,9 @@
 # Settings
 # ---------------
-export HISTFILESIZE=10000
-export HISTTIMEFORMAT='%F %T ' # add timestamp to history
-export HISTSIZE=10000
-export HISTCONTROL=erasedups
-#export HISTIGNORE="&:ls"[bf]g:exit:[ /t]*" #ignore spaces, duplicates and more in history
 export EDITOR="vim"
-export INPUTRC=~/.inputrc  # Allows searching of history
 export ASGARD="~/Dropbox/asgard" #TODO(customize)
-
+# Inputrc
+export INPUTRC=~/.inputrc  # Allows searching of history
 
 # Other:
 BOND="op successful!"
@@ -25,6 +20,7 @@ function go () {
 # ---------------
 if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
 if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
+# Don't use, cause infinite loop
 #if [ -a ~/.bash_profile ];then source ~/.bash_profile; fi
 ##############################################
 # External
