@@ -67,8 +67,6 @@ def install(args = None):
     global SKIP_ALL
     global OVERWRITE_ALL
     CONFIRM = args.confirm
-    import pdb
-    pdb.set_trace()
 
     symlinks = _get_symlinks()
 
@@ -83,27 +81,34 @@ def install(args = None):
             if (os.path.exists(fpath)):
                 if (SKIP_ALL):
                     flag_create = False
+                    continue
                 else:
-                    resp = raw_input("%s exists. [s]kip, [S]kip All, [O]verwrite: "
+                    resp = raw_input("%s exists. [s]kip, [S]kip All, [O]verwrite, [b]ackup: "
                             % fname)
                     if (resp == 's'):
                         flag_create = False
-                    if (resp == 'S'):
+                        continue
+                    elif (resp == 'S'):
                         SKIP_ALL = True
                         flag_create = False
+                        continue
                     elif (resp.lower() == 'o'):
                         print ("overwriting...")
                         os.remove(fpath)
+                    elif (resp == 'b'):
+                        print ("backing up...")
+                        os.rename(fpath, os.path.join( os.path.dirname(fpath),
+                            "~" + os.path.basename(fpath)))
                     else:
                         print("invalid input, skipping")
                         flag_create = False
 
             # Confirmation before creating
-            if (CONFIRM):
+            if (CONFIRM) and (resp not in ["o", "s", "S"]):
                 resp = None
                 while (resp not in ["y", "n"]):
-                    resp = raw_input("do you want to create %s? [y]es, [n]o" % fname)
-                if (resp == 'y'):
+                    resp = raw_input("do you want to create %s? [y]es, [n]o: " % fname)
+                if (resp == 'n'):
                     flag_create = False
 
             # Create hard link to dot file

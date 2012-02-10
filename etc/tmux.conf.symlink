@@ -35,4 +35,4 @@ set -g visual-activity on
 setw -g automatic-rename on
 
 # Copy mode using vi syntax
-set-window-option mode-keys vi
+#set-window-option mode-keys vi

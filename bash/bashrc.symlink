@@ -28,7 +28,7 @@ if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
 
 # Python
 # --------------------------
-export PYTHONPATH=$ASGARD/code/libs/python/bin:$PYTHONPATH
+export PYTHONPATH=~/Dropbox/code/libs/python/bin:$PYTHONPATH
 
 # Virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs

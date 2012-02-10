@@ -46,3 +46,6 @@ Next
 
 ~/.dotfiles_logs
 -> collection of everything installed by .dotfiles
+############################
+BUGS:
+- gitignore_globa file

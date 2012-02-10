@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/kevinlin/Dropbox/code/projects/sites/ile/assets/jquery'
+let g:netrw_dirhist_2='/Users/kevinlin/Dropbox/asgard/new/django'
+let g:netrw_dirhist_3='/Users/kevinlin/Dropbox/School/comp322/hwk/hw_2/bin'

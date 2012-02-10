@@ -1,0 +1,17 @@
+Plugins
+=========
+nerdtree
+  File browser
+
+supertab
+  Tab autocompletion
+
+syntastic
+  Syntax highlighting
+
+taglist
+  Tag bar
+
+# New
+vim-fugitive
+writer.vim
