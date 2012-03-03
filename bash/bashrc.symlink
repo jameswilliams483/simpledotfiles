@@ -20,6 +20,7 @@ function go () {
 # ---------------
 if [ -a ~/.bash_aliases ];then source ~/.bash_aliases; fi
 if [ -a ~/.bashrc_local ];then source ~/.bashrc_local; fi
+if [ -d ~/Dropbox/asgard/bin ]; then export PATH=~/Dropbox/asgard/bin:$PATH; fi
 # Don't use, cause infinite loop
 #if [ -a ~/.bash_profile ];then source ~/.bash_profile; fi
 ##############################################

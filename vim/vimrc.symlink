@@ -9,10 +9,11 @@ set runtimepath+=~/.vim/plugin
 " ------------------------------
 
 "  Basics
+syntax on
+set showcmd   " show what's been entered so far
 set nocompatible " don't respect vi defaults
 set number
 set ruler " line & column count on bottom right corner
-syntax on
 set autoindent
 
 " Set encoding
@@ -23,14 +24,14 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+set expandtab                         " use spaces, not tabs
 set list listchars=tab:\ \ ,trail:·
 
 " Searching
-set hlsearch
-set incsearch  " Show search match while typing
+set hlsearch                          " highlight matches
+set incsearch                         " Show search match while typing
 set ignorecase
-set smartcase
+set smartcase                         " case sensitive if it contains one cap
 set grepprg=grep\ -nH\ $*
 
 " Tab completion
@@ -119,7 +120,8 @@ function Paste()
 endfunction
 " ====================================
 " Etc
-call pathogen#infect()
+" TODO: check if pathogen is installed
+call pathogen#infect()    " Initialize pathogen
 
 " Close vim if NERDTree is only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

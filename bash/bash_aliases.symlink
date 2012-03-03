@@ -5,3 +5,6 @@ alias topm="top -o rsize"
 alias topc="top -o cpu"
 alias ll="ls -l"
 #alias ls="ls --color=auto" #doesn't work on mac
+
+# Git
+alias git-log="git tag | tail -n 1 | xargs -I {} git log {}.."

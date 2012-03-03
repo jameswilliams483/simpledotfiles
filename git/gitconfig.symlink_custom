@@ -1,7 +1,11 @@
 [alias]
     st = status
+    ci = commit
+    br = branch
+    co = checkout
     df = diff
     undo = reset --hard
-    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format::  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    vtag = tag -l -n1
+    tlog = log --since="yesterday"
 
 
