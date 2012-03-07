@@ -1,3 +1,5 @@
 .*.priv
 protected
+
 .*.swp
+vim/.vim/_tmp/*
