@@ -14,6 +14,7 @@ Suffixes:
 .symlink
   These files are hardlinked to the user's home directory.
 
+#######################
 .symlink_custom
   These files are hardlinked but directory needs to be specified.
   Details located in .meta file.
