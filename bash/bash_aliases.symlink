@@ -8,3 +8,4 @@ alias ll="ls -l"
 
 # Git
 alias git-log="git tag | tail -n 1 | xargs -I {} git log {}.."
+alias g-reset="rm data.sql && ./manage.py syncdb"

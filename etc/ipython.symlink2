@@ -3,7 +3,7 @@ import os
 
 c = get_config()
 HOME = os.path.expanduser("~")
-LOGFILE = os.path.join(HOME, "Insync", "kevinslin8@gmail.com", "logs", "ipython.log")
+#LOGFILE = os.path.join(HOME, "Insync", "kevinslin8@gmail.com", "logs", "ipython.log")
 #------------------------------------------------------------------------------
 # TerminalIPythonApp configuration
 #------------------------------------------------------------------------------
@@ -181,9 +181,9 @@ c.TerminalInteractiveShell.confirm_exit = False
 # c.TerminalInteractiveShell.readline_remove_delims = '-/~'
 
 # Start logging to the default log file.
-c.TerminalInteractiveShell.logstart = True
-c.TerminalInteractiveShell.logfile = LOGFILE
-c.TerminalInteractiveShell.logappend = LOGFILE
+c.TerminalInteractiveShell.logstart = False
+#c.TerminalInteractiveShell.logfile = LOGFILE
+#c.TerminalInteractiveShell.logappend = LOGFILE
 
 # The shell program to be used for paging.
 # c.TerminalInteractiveShell.pager = 'less'

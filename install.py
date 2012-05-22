@@ -21,8 +21,6 @@ p = argparse.ArgumentParser(description="dotfiles installer",
 p.add_argument('-c', '--confirm', default = False, action = 'store_true',
             help="ask for confirmation before linking")
 
-
-
 def _collect_files(pattern):
     """
     Collect all files by searching recursively via current directory.

@@ -2,12 +2,11 @@ Overview:
 =========
 This is to help manage your dotfiles across multiple configurations.
 
-Folders:
----------
-protected
-    Everything in here is ignored by git
 
-Files suffixes:
+Files
+=========
+
+Suffixes:
 ---------------
 .custom
   These files need special instructions _experimental_
@@ -21,6 +20,11 @@ Files suffixes:
 
 .priv
   These files are ignored by git. Sensitive config options should be put here
+
+Folders:
+---------
+protected
+    Everything in here is ignored by git
 
 Files
 ---------
@@ -39,60 +43,4 @@ python
 vim
   gvimrc.symlink
   vimrc.symlink
-
-
-
-#######################
-
-Syntax:
--------
--c | --confirm
-    Confirm for every symbolic link
-
-Options:
----------------
-append
-    Adds the following line to end of existing dot file
-    ## {% simplelogfiles_start %}
-    ## simpledotfiles_start
-    ## DON'T delete anything below this line
-    ...
-    ## {% simplelogfiles_end %}
-
- delete
-    Delete dotfiles
-    -a
-        Delete all dotfiles
-
-extend
-  Keep old configuration but in a seperate file.
-  eg.
-  mv .bashrc .bashrc_local
-  ln .bashrc ~/.bashrc
-  ...
-  source ~/.bashrc_local
-
-overwrite
-    removes old file
-
-skip-all
-
-overwrite-all
-
-append-all
-
-backup-all
-    Saves backups as ~/.dotfiles/<file>
-
-#######################
-
-Meta File
-----------
-The .meta file is used to specify linkage conventions for .symlink_custom and .priv files.
-Data is stored in key value pairs in the form of <file_name> = <linkage path>
-
-  eg.
-    gitconfig.symlink_custom = "/opt/local/etc/.gitconfig"
-
-Note that the full path name needs to be given
 
